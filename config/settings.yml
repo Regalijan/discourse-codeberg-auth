@@ -1,6 +1,7 @@
 plugins:
   enable_codeberg_login:
     default: false
+    validator: AuthProviderCredentialsValidator
 
   codeberg_client_id:
     client: false

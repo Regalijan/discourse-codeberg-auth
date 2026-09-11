@@ -54,8 +54,12 @@ class CodebergAuthenticator < Auth::ManagedAuthenticator
     end
   end
 
-  def enabled?
-    SiteSetting.enable_codeberg_login?
+  def enable_setting
+    :enable_codeberg_login
+  end
+
+  def required_settings
+    %i[codeberg_client_id codeberg_secret]
   end
 
   def name
